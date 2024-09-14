@@ -8,6 +8,6 @@ Neste guia, você encontrará uma introdução abrangente às principais funcion
 * **Tipos de Serviço em Nuvem**
 * **Criação de Máquinas Virtuais**
 * **Configuração de Instâncias de Banco de Dados**
-* **Localização de Serviços por Categoria**
+* **[Localização de Serviços por Categoria](https://github.com/gu1frnc4/Guia_Azure/tree/localizacao-servicos-categoria-azure)**
 * **Construção de Arquiteturas**
 * **Configuração de Recursos e Dimensionamento em VMs**
