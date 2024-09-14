@@ -4,16 +4,16 @@ Este repositório fornece um guia detalhado sobre como localizar e acessar os pr
 
 ## Índice
 
-1. Introdução
-2. Acessando o Portal do Azure
-3. Localizando Serviços por Categoria
-    - Computação
-    - Rede
-    - Banco de Dados
-    - Armazenamento
-    - Segurança
-    - DevOps
-4. Conclusão
+1. [Introdução](https://github.com/gu1frnc4/Guia_Azure/tree/localizacao-servicos-categoria-azure?tab=readme-ov-file#introdução)
+2. [Acessando o Portal do Azure](https://github.com/gu1frnc4/Guia_Azure/tree/localizacao-servicos-categoria-azure?tab=readme-ov-file#acessando-o-portal-do-azure)
+3. [Localizando Serviços por Categoria](https://github.com/gu1frnc4/Guia_Azure/tree/localizacao-servicos-categoria-azure?tab=readme-ov-file#localizando-serviços-por-categoria)
+    - [Computação](https://github.com/gu1frnc4/Guia_Azure/tree/localizacao-servicos-categoria-azure?tab=readme-ov-file#computação)
+    - [Rede](https://github.com/gu1frnc4/Guia_Azure/tree/localizacao-servicos-categoria-azure?tab=readme-ov-file#rede)
+    - [Banco de Dados](https://github.com/gu1frnc4/Guia_Azure/tree/localizacao-servicos-categoria-azure?tab=readme-ov-file#banco-de-dados)
+    - [Armazenamento](https://github.com/gu1frnc4/Guia_Azure/tree/localizacao-servicos-categoria-azure?tab=readme-ov-file#armazenamento)
+    - [Segurança](https://github.com/gu1frnc4/Guia_Azure/tree/localizacao-servicos-categoria-azure?tab=readme-ov-file#segurança)
+    - [DevOps](https://github.com/gu1frnc4/Guia_Azure/tree/localizacao-servicos-categoria-azure?tab=readme-ov-file#devops)
+4. [Conclusão](https://github.com/gu1frnc4/Guia_Azure/tree/localizacao-servicos-categoria-azure?tab=readme-ov-file#conclusão)
 
 ## Introdução
 
