@@ -2,7 +2,7 @@
 
 ### Explorando as Principais Funcionalidades e Conceitos do Azure 🌐
 
-Neste guia, você encontrará uma introdução abrangente às principais funcionalidades e conceitos do Microsoft Azure. Vamos explorar:
+Neste guia, você encontrará uma introdução abrangente às principais funcionalidades e conceitos do Microsoft Azure apresentados entre as branches. Vamos explorar:
 
 * **Benefícios da Computação em Nuvem**
 * **Tipos de Serviço em Nuvem**
