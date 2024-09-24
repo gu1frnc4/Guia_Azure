@@ -1,71 +1,63 @@
-# Guia para Criar Arquiteturas no Azure
-
-Bem-vindo ao guia para criar arquiteturas no Azure! Esta branch contém exemplos e melhores práticas para projetar e implementar arquiteturas de soluções na plataforma Microsoft Azure.
+# Guia de Configuração de Redes Virtuais, Balanceamento de Carga e Dimensionamento de VMs no Azure
 
 ## Índice
-
-- Introdução
-- Pré-requisitos
-- Passo a Passo
-  - 1. Planejamento
-  - 2. Configuração do Ambiente
-  - 3. Implementação
-  - 4. Monitoramento e Manutenção
-- Recursos Adicionais
-- Contribuições
-- Licença
+1. Introdução
+2. Redes Virtuais
+3. Balanceamento de Carga
+4. Configurando Recursos e Dimensionamentos em uma VM no Azure
+    - Passo 1: Acessar o Portal do Azure
+    - Passo 2: Configurar Recursos da Máquina Virtual
+    - Passo 3: Redimensionar a Máquina Virtual
+5. Conclusão
 
 ## Introdução
+Este guia fornece uma visão geral sobre redes virtuais e balanceamento de carga no Azure, além de um passo a passo para configurar recursos e dimensionamentos em uma máquina virtual (VM).
 
-Este guia tem como objetivo fornecer uma visão geral de como criar arquiteturas robustas e escaláveis no Azure. Vamos abordar desde o planejamento inicial até a implementação e manutenção contínua.
+## Redes Virtuais
+As redes virtuais (VNets) no Azure permitem que você crie um ambiente de rede isolado e seguro para suas VMs e outros recursos. Elas são essenciais para a comunicação entre recursos no Azure e podem ser configuradas para se conectar a redes locais.
 
-## Pré-requisitos
+### Benefícios das Redes Virtuais
+- **Isolamento e Segurança**: Segregação de recursos para maior segurança.
+- **Conectividade**: Conexão entre VMs, serviços e redes locais.
+- **Escalabilidade**: Fácil expansão conforme a necessidade.
 
-Antes de começar, certifique-se de ter:
+## Balanceamento de Carga
+O balanceamento de carga distribui o tráfego de rede entre vários recursos para otimizar a utilização, maximizar a taxa de transferência e minimizar o tempo de resposta. No Azure, você pode usar diferentes serviços de balanceamento de carga, como o Azure Load Balancer, o Application Gateway e o Traffic Manager[^1^][1][^2^][2].
 
-- Uma conta no Microsoft Azure
-- Conhecimento básico de serviços de nuvem e arquitetura de TI
-- Ferramentas de linha de comando como Azure CLI ou PowerShell
+### Tipos de Balanceamento de Carga
+- **Azure Load Balancer**: Balanceamento de carga de camada 4 para tráfego TCP e UDP.
+- **Application Gateway**: Balanceamento de carga de camada 7 para tráfego HTTP e HTTPS.
+- **Traffic Manager**: Balanceamento de carga baseado em DNS para distribuir o tráfego entre diferentes regiões.
 
-## Passo a Passo
+## Configurando Recursos e Dimensionamentos em uma VM no Azure
 
-### 1. Planejamento
+### Passo 1: Acessar o Portal do Azure
+1. Acesse o [Portal do Azure](https://portal.azure.com) e faça login com suas credenciais.
 
-1. **Defina os requisitos do projeto**: Entenda as necessidades do seu projeto e os objetivos de negócio.
-2. **Escolha os serviços do Azure**: Selecione os serviços apropriados, como Azure App Service, Azure SQL Database, Azure Storage, etc.
-3. **Desenhe a arquitetura**: Utilize ferramentas como o [Azure Architecture Center](https://learn.microsoft.com/pt-br/azure/architecture/) para criar diagramas e planejar a estrutura.
+### Passo 2: Configurar Recursos da Máquina Virtual
+1. No painel de navegação à esquerda, clique em "Máquinas Virtuais" para listar todas as VMs.
+2. Selecione a VM que deseja configurar.
+3. No painel da VM, acesse a seção de "Configurações".
+4. Escolha o tipo de tamanho da VM:
+    - No menu de configurações, selecione "Tamanho" para ajustar o número de CPUs virtuais e a memória RAM.
+    - Escolha um tamanho baseado em suas necessidades de performance (ex.: DS1_v2, D4_v3, etc.).
+5. Configure o armazenamento:
+    - No menu "Discos", escolha entre discos gerenciados padrão (HDD) ou premium (SSD).
+    - Adicione discos adicionais conforme necessário.
+6. Configure a rede:
+    - No menu "Rede", configure ou modifique a rede virtual à qual a VM está conectada.
+    - Certifique-se de que a sub-rede e o grupo de segurança de rede (NSG) estejam configurados para permitir o tráfego necessário.
 
-### 2. Configuração do Ambiente
+### Passo 3: Redimensionar a Máquina Virtual
+1. Acesse a opção de redimensionamento:
+    - No painel da VM, selecione "Redimensionar".
+2. Escolha o novo tamanho:
+    - Selecione o novo tamanho da VM conforme suas necessidades.
+3. Revisão e aplicação:
+    - Revise as configurações e aplique as mudanças.
 
-#### a. **Crie um grupo de recursos**: Organize seus recursos em um grupo para facilitar a gestão.
-   ```sh
-   az group create --name MeuGrupoDeRecursos --location eastus
-Configure a rede virtual: Estabeleça a rede e sub-redes necessárias.
-az network vnet create --resource-group MeuGrupoDeRecursos --name MinhaVNet --address-prefix 10.0.0.0/16 --subnet-name MinhaSubRede --subnet-prefix 10.0.0.0/24  
-```
+## Conclusão
+Seguindo este guia, você poderá configurar redes virtuais, balanceamento de carga e ajustar os recursos e dimensionamentos de suas VMs no Azure, garantindo uma infraestrutura otimizada e eficiente.
 
-### 3. Implementação
-#### Implante os serviços: Utilize templates do Azure Resource Manager (ARM) ou scripts para implantar os serviços.
-```sh
-az deployment group create --resource-group MeuGrupoDeRecursos --template-file template.json
-```
-
-Configuração de segurança: Configure políticas de segurança e controle de acesso.
-
-### 4. Monitoramento e Manutenção
-Configure o monitoramento: Utilize Azure Monitor e Log Analytics para monitorar a performance e a saúde dos recursos.
-
-Automatize tarefas de manutenção: Utilize Azure Automation para tarefas recorrentes.
-
-### Recursos Adicionais:
-Centro de Arquitetura do Azure
-
-Documentação do Azure
-
-Exemplos de Templates ARM
-
-### Contribuições
-##### Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e enviar pull requests.
-
-### Licença
-Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+[^1^][1]: [Opções de balanceamento de carga - Azure Architecture Center](https://learn.microsoft.com/pt-br/azure/architecture/guide/technology-choices/load-balancing-overview)
+[^2^][2]: [Azure Load Balancer – Balanceamento de Carga de Aplicativo](https://azure.microsoft.com/pt-br/products/load-balancer/)
